@@ -1,0 +1,133 @@
+/* Reset y base */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+    padding-bottom: 80px; /* espacio para nav fija */
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Botón de instalación */
+#btn-instalar {
+    display: block;
+    background-color: #ffcb05;
+    color: #2a75bb;
+    padding: 10px 20px;
+    margin: 10px auto;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 2px solid #2a75bb;
+}
+
+#btn-instalar:hover {
+    background-color: #2a75bb;
+    color: #fff;
+}
+
+/* Lista de Pokémon */
+.c-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.c-lista-pokemon {
+    background-color: #e0f2ff;
+    width: calc(50% - 10px);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Míos */
+.c-unpoke {
+    background-color: #171717;
+    width: calc(50% - 10px);
+    height: 100px;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.c-mios-pokemon {
+    background-color: aliceblue;
+    color: #171717;
+}
+
+/* Imagenes */
+.c-unpoke img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Navegación */
+.c-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ff0000;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 2px solid #b30000;
+    z-index: 1000;
+}
+
+.c-nav-item {
+    background: transparent;
+    color: #fff;
+    font-weight: bold;
+    width: 20%;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.c-nav-item:hover {
+    color: #ffcb05;
+}
+
+/* Responsivo */
+@media (min-width: 600px) {
+    .c-lista-pokemon {
+        width: calc(33.33% - 10px);
+    }
+
+    .c-unpoke {
+        width: calc(25% - 10px);
+    }
+
+    .c-nav-item {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .c-lista-pokemon {
+        width: calc(20% - 10px);
+    }
+
+    .c-unpoke {
+        width: calc(20% - 10px);
+    }
+}
